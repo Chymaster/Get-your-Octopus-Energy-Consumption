@@ -13,8 +13,7 @@ url = 'https://api.octopus.energy/v1/electricity-meter-points/'+MPAN+'/meters/'+
 
 # Set a time period
 period_from = str(date.today() - timedelta(days=1))
-period_to = str(date.today())
-period = '?period_from='+period_from+'T00:00Z&period_to='+period_to+'T00:00Z'
+period = '?period_from='+period_from+'T00:00Z&period_to='+period_from+'T23:30Z'
 
 # Request URL
 r = requests.get(url+period, auth=(APIKEY,''))
